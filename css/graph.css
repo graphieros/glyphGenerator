@@ -1,0 +1,160 @@
+html {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  margin: 0 auto;
+}
+
+:root{
+  --C0: rgb(174, 214, 201);
+  --C1: rgb(131, 182, 166);
+  --C2: rgb(107, 158, 142);
+  --C3: rgb(81, 131, 115);
+  --C4: rgb(59, 104, 89);
+  --C5: rgb(35, 71, 59);
+  --C6: rgb(20, 46, 37);
+  --C7: rgb(8, 22, 17);
+}
+
+.main {
+  display: grid;
+  margin:0 auto;
+  height:100vh;
+  width:100vw;
+  background: radial-gradient(var(--C0), var(--C6));
+  grid-template-columns: auto;
+  grid-gap: 30px;
+  align-items:center;
+  justify-items:center;
+  box-sizing: border-box;
+  padding:30px;
+}
+
+#draw{
+  display: grid;
+  grid-template-columns: auto;
+  align-items:center;
+  justify-items:center;
+  margin: 0 auto;
+  height:100%;
+  width:100%;
+  border:1px solid var(--C0);
+  border-radius:3px;
+}
+
+#draw{
+  background: linear-gradient(to top, var(--C0), var(--C3));
+  grid-template-rows: auto 200px;
+  grid-gap: 20px;
+}
+
+.wrapper{
+  height:300px;
+  width:300px;
+  margin: 0 auto;
+}
+
+#div{
+  position:absolute;
+  height: 300px;
+  width:300px;
+}
+
+.plot{
+  height:20px;
+  width:20px;
+  border-radius:100px;
+  background: rgba(1,1,1,0.3);
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.plot:hover {
+  background: white;
+  box-shadow: 0 0 5px var(--C7);
+  transition: all 0.3s ease;
+}
+
+#c{
+  margin-top: 136.9px;
+  margin-left:136.4px;
+} 
+
+#v0{
+  margin-top:136.9px;
+  margin-left:251px;
+}
+
+#v1{
+  margin-top: 235px;
+  margin-left:193px;
+}
+
+#v2{
+  margin-top: 235px;
+  margin-left: 79px;
+}
+
+#v3{
+  margin-top: 136.9px;
+  margin-left: 22px;
+}
+
+#v4{
+  margin-top: 38px;
+  margin-left: 79px;
+}
+
+#v5{
+  margin-top: 38px;
+  margin-left: 193px;
+}
+
+#dataBox{
+  border-radius: 3px 3px 0 0;
+  width:90vw;
+  height:70px;
+  margin:0 auto;
+  font-size:0.6em;
+  text-align:center;
+  overflow-wrap: break-word;
+  background: black;
+  color: lightgreen;
+  box-sizing: border-box;
+  padding:10px;
+  border-radius:2px;
+}
+
+button{
+  box-sizing: border-box;
+  padding:10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size:1.2em;
+  background: linear-gradient(to top, var(--C5), var(--C7));
+  color: var(--C0);
+  border-radius:5px;
+  border:none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover{
+  background:linear-gradient(to top, var(--C3), var(--C5));
+  text-shadow: 0 1px 1px black;
+  box-shadow: 0 0 5px black;
+  transition: all 0.3s ease;
+}
+
+#memory{
+  border-radius: 0 0 3px 3px;
+  text-align:center;
+  width:90vw;
+  height: 70px;
+  background:rgb(243, 236, 205);
+  color: black;
+  font-size: 0.6em;
+  box-sizing: border-box;
+  padding:10px;
+  overflow-wrap: break-word;
+}
