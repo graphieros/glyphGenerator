@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="css/graph.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/graph.css">
+    <title>Document</title>
 </head>
+
 <body>
 
-  <section class="main">
+    <div class="massiveWrapper">
+        <section class="main">
 
-    <section id="draw">
-      <div class="wrapper" id="wrapper">
-        <div id="div">
-          <div id="c" class="plot"></div>
-          <div id="v0" class="plot"></div>
-          <div id="v1" class="plot"></div>
-          <div id="v2" class="plot"></div>
-          <div id="v3" class="plot"></div>
-          <div id="v4" class="plot"></div>
-          <div id="v5" class="plot"></div>
-        </div>
-      </div>
-      <div class="btnBox">
-        <button id="btn">cut</button>
-        <button id="clear">clear</button>
-      </div>
-      
-    </section>
-    <section class="data">
-      <div id="dataBox"></div>
-      <div id="memory"></div>
-    </section>
-  </section>
+            <section id="draw">
+                <div class="wrapper" id="wrapper">
+                    <div id="div">
+                        <div id="c" class="plot"></div>
+                        <div id="v0" class="plot"></div>
+                        <div id="v1" class="plot"></div>
+                        <div id="v2" class="plot"></div>
+                        <div id="v3" class="plot"></div>
+                        <div id="v4" class="plot"></div>
+                        <div id="v5" class="plot"></div>
+                    </div>
+                </div>
+                <div class="btnBox">
+                    <button id="btn">cut</button>
+                    <button id="clear">clear</button>
+                    <button id="print">print</button>
+                    <button id="wash">wash</button>
+                </div>
 
-  
-  <script src="js/graph.js"></script>
+            </section>
+            <section class="data">
+                <div id="dataBox"></div>
+                <div id="memory"></div>
+            </section>
+
+            <section class="outputDisplay" id="output"></section>
+        </section>
+    </div>
+
+    <script src="js/graph.js"></script>
 </body>
+
 </html>
