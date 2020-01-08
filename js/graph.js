@@ -12,9 +12,9 @@ let svg = document.createElementNS(xmlns, "svg");
 svg.id = "svg";
 let codeContent = [];
 let memoryArray = [];
-let last;
 
-function graph() {
+
+(function graph() {
     const WRAPPER = document.getElementById("wrapper");
     const PLOTS = document.getElementsByClassName("plot");
 
@@ -29,7 +29,7 @@ function graph() {
     }
 
     let boxWidth = 600;
-    let boxHeight = 600;
+    let boxHeight = 600; 
 
     svg.setAttributeNS(null, "viewBox", "0 0 2100 2100");
     svg.setAttributeNS(null, "width", boxWidth);
@@ -52,8 +52,6 @@ function graph() {
 
     }());
 
-    // let path = document.createElementNS(xmlns, "path");
-
     for (i = 0; i < PLOTS.length; i += 1) {
         let onePlot = PLOTS[i];
         let oneREALplot = pointsArray[i];
@@ -66,26 +64,14 @@ function graph() {
     }
 
     function drawTheDamnLine() {
-        // svg.innerHTML = "";
+
         if (drawingLines.length >= 2) {
-            //ORIGINAL CODE
-
-            // for(i = 0; i < drawingLines.length; i += 1){
-            //   if(!origin){
-            //     origin = drawingLines[0].join(' ');
-            //   }else{
-            //     destination = drawingLines[i].join(' ');
-            //     theFinalLine += `${origin} ${destination} `;
-            //     origin = destination;
-            //   }
-            // }
-
             let path = document.createElementNS(xmlns, "path");
             path.setAttributeNS(null, 'stroke', "black");
             path.setAttributeNS(null, 'stroke-width', 60);
             path.setAttributeNS(null, 'stroke-linejoin', "round");
             path.setAttributeNS(null, 'stroke-linecap', 'round');
-            path.setAttributeNS(null, 'd', `M ${drawingLines}`); //as simple as that
+            path.setAttributeNS(null, 'd', `M ${drawingLines}`); 
             path.setAttributeNS(null, 'opacity', 1);
             path.setAttributeNS(null, "fill", "none");
             svg.appendChild(path);
@@ -94,11 +80,9 @@ function graph() {
         DATABOX.innerHTML = drawingLines;
     };
     WRAPPER.appendChild(svg);
-}
+}());
 
-graph();
-
-function cut() {
+(function cut() {
 
     const BUTTON = document.getElementById("btn");
     const SVG = document.getElementById("svg");
@@ -114,20 +98,15 @@ function cut() {
         path.setAttributeNS(null, 'opacity', 1);
         path.setAttributeNS(null, "fill", "none");
         SVG.appendChild(path);
-        // MEMORY.innerHTML = "";
+
         MEMORY.innerText += `<path d="M ${drawingLines}"/>`;
         memoryArray.push(MEMORY.innerText);
-        if (memoryArray.length > 1) {
-            last = memoryArray[memoryArray.length - 1];
-        }
-        // CODE.innerHTML = "";
+
         pointsArray = [];
         drawingLines = [];
     });
 
-}
-
-cut();
+}());
 
 (function clear() {
     const CLEAR = document.getElementById("clear");
@@ -155,6 +134,8 @@ cut();
     BTNPRINT.addEventListener("click", function() {
         let smallSVG = document.createElementNS(xmlns, "svg");
         smallSVG.className = "smallSVG";
+        smallSVG.id = "smallSVG";
+
         smallSVG.setAttributeNS(null, "viewBox", "0 0 1000 1000");
         smallSVG.setAttributeNS(null, "width", 30);
         smallSVG.setAttributeNS(null, "height", 30);
@@ -164,7 +145,7 @@ cut();
         smallSVG.setAttributeNS(null, "fill", "none");
         smallSVG.setAttributeNS(null, "stroke", "black");
         smallSVG.setAttributeNS(null, "position", "absolute");
-        smallSVG.id = "smallSVG";
+        
         smallSVG.innerHTML = MEMORY.innerHTML.split('&lt;').join('<').split('&gt;').join('>');
         OUTPUT.appendChild(smallSVG);
     })
