@@ -13,7 +13,6 @@ svg.id = "svg";
 let codeContent = [];
 let memoryArray = [];
 
-
 (function graph() {
     const WRAPPER = document.getElementById("wrapper");
     const PLOTS = document.getElementsByClassName("plot");
@@ -40,10 +39,12 @@ let memoryArray = [];
     svg.style.display = "block";
 
     (function hex() {
+
         let size = 400;
         let Xcord;
         let Ycord;
         pointsArray.push([Xcenter, Ycenter]);
+
         for (i = 0; i <= sides; i += 1) {
             Xcord = Math.round((Xcenter + size * Math.cos(i * 2 * Math.PI / sides)) * 100) / 100;
             Ycord = Math.round((Ycenter + size * Math.sin(i * 2 * Math.PI / sides)) * 100) / 100;
@@ -79,6 +80,7 @@ let memoryArray = [];
 
         DATABOX.innerHTML = drawingLines;
     };
+
     WRAPPER.appendChild(svg);
 }());
 
@@ -109,29 +111,34 @@ let memoryArray = [];
 }());
 
 (function clear() {
+
     const CLEAR = document.getElementById("clear");
+
     CLEAR.addEventListener("click", function() {
         svg.innerHTML = "";
         pointsArray = [];
         drawingLines = [];
         CODE.innerHTML = "";
         MEMORY.innerHTML = "";
-    })
+    });
+
 }());
 
 (function wash() {
+
     const WASH = document.getElementById("wash");
     WASH.addEventListener("click", function() {
         OUTPUT.innerHTML = "";
-    })
-}());
+    });
 
+}());
 
 (function printGlyph() {
 
     //can't manage to store MEMORY.innerHTML.split('&lt;').join('<').split('&gt;').join('>') into a variable
 
     BTNPRINT.addEventListener("click", function() {
+
         let smallSVG = document.createElementNS(xmlns, "svg");
         smallSVG.className = "smallSVG";
         smallSVG.id = "smallSVG";
@@ -148,5 +155,6 @@ let memoryArray = [];
         
         smallSVG.innerHTML = MEMORY.innerHTML.split('&lt;').join('<').split('&gt;').join('>');
         OUTPUT.appendChild(smallSVG);
-    })
+    });
+    
 }());
