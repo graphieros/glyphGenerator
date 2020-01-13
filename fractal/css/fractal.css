@@ -1,0 +1,83 @@
+.fractalWrapper{
+  margin:0 auto;
+  width:90vw;
+  box-sizing: border-box;
+  padding:10px;
+  border:1px solid grey;
+  border-radius:3px;
+  display: grid;
+  align-items:center;
+  justify-items:center;
+  grid-gap:10px;
+}
+
+#fractalInput,
+#fractalOutput {
+  display:grid;
+  align-items:center;
+  justify-items:center;
+  height:200px;
+  width:200px;
+  border-radius:2px;
+}
+
+#fractalInput{  
+  border:1px solid lightgrey;
+}
+
+#fractalOutput{
+  position:relative;
+  border: 1px solid grey;
+}
+
+.fractalCommands{
+  width:200px;
+  height:50px;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap:5px;
+  border-radius:1px solid lightgrey;
+  border-radius:2px;
+}
+
+.fractalBtn {
+  display:grid;
+  align-items:center;
+  justify-items:center;
+  box-sizing: border-box;
+  background: lightgrey;
+  border-radius:2px;
+  height:100%;
+  width:100%;
+  transition: all 0.3s ease;
+  border:1px solid white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size:0.75em;
+  color:grey;
+  cursor:pointer;
+  text-align:center;
+}
+
+.fractalBtn:hover{
+  border:1px solid grey;
+  transition: all 0.3s ease;
+  color:black;
+  font-weight:bold;
+}
+
+.memory {
+  width:200px;
+  height:50px;
+  font-size:0.4em;
+  font-family: 'Courier New', Courier, monospace;
+  color:greenyellow;
+  background:black;
+  border-radius:2px;
+  box-sizing: border-box;
+  padding:3px;
+  overflow-wrap: break-word;
+}
+
+svg {
+  position: absolute;
+}
