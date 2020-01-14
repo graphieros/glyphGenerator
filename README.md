@@ -2,5 +2,5 @@
 
 Solutions to write in graphieros online
 
->fractal
+<b>fractal</b><br>
 Compose fractal graphieros glyphs
