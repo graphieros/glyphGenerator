@@ -5,6 +5,7 @@ let svg = document.createElementNS(xmlns, "svg");
 svg.id = "fractalSVG";
 const MEMORYIN = document.getElementById("memoryInput");
 const MEMORYOUT = document.getElementById("memoryOutput");
+const SIDESHOW = document.getElementById("simpleGlyphs"); 
 
 let i;
 
@@ -149,7 +150,20 @@ let strokeWidth = 8;
         svgWidth /= 2;
         svgHeight /= 2;
         color /= 1.3;
-        strokeWidth *=1.2;
+        strokeWidth *=1;
+   
+    let sideShowSVG = document.createElementNS(xmlns, "svg");
+    sideShowSVG.setAttributeNS(null, "viewBox", "0 0 200 200");
+    sideShowSVG.setAttributeNS(null, "width", "32");
+    sideShowSVG.setAttributeNS(null, "height", "32");
+    sideShowSVG.setAttributeNS(null, "stroke-width", "8");
+    sideShowSVG.setAttributeNS(null, "background", "transparent");
+    sideShowSVG.setAttributeNS(null, "stroke-linecap", "round");
+    sideShowSVG.setAttributeNS(null, "stroke-linejoin", "round");
+    sideShowSVG.setAttributeNS(null, "fill", "none");
+    sideShowSVG.setAttributeNS(null, "stroke", "greenyellow"); 
+    sideShowSVG.innerHTML = MEMORYOUT.innerHTML.split('&lt;').join('<').split('&gt;').join('>');
+    SIDESHOW.appendChild(sideShowSVG);
   });
   
 }());
@@ -159,6 +173,7 @@ let strokeWidth = 8;
   let outputSVG = document.getElementById("outputSVG");
   BTNWASH.addEventListener("click", function(){
     fractalOutput.innerHTML = "";
+    SIDESHOW.innerHTML = "";
     svgWidth = 200;
     svgHeight = 200;
     color = 240;
