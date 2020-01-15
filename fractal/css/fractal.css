@@ -1,9 +1,44 @@
+.mainContainer{
+  width:300px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns: auto 64px;
+  align-items:center;
+  grid-gap:none;
+}
+
+.simpleGlyphShow{
+  grid-column: 2;
+  height:100%;
+  width:100%;
+  display:grid;
+  align-items:end;
+  box-sizing: border-box;
+  padding-bottom:10px;
+}
+
+#simpleGlyphs{
+  height:202px;
+  width:100%;
+  border-radius:2px;
+  box-sizing: border-box;
+  padding:5px;
+  display:grid;
+  justify-items:center;
+  align-items:center;
+  align-content:start;
+  background: black;
+}
+
+#simpleGlyphs > svg {
+  position:relative;
+}
+
 .fractalWrapper{
   margin:0 auto;
-  width:90vw;
   box-sizing: border-box;
   padding:10px;
-  border:1px solid grey;
+  /* border:1px solid grey; */
   border-radius:3px;
   display: grid;
   align-items:center;
