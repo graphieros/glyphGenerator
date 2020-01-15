@@ -9,30 +9,37 @@
 </head>
 <body>
 
-  <section class="fractalWrapper">
-    <div class="fractalName"><center><b>This is a fractal graphieros composer.</b></center><br><br>
-    > click on circles to draw lines <br>
-    > to draw a dot, double click on a circle <br>
-    > <b>CUT</b> to start a new line <br>
-    > <b>CLEAR</b> to erase your input <br>
-    > <b>PRINT</b> your result <br>
-    > <b>WASH</b> to erase the output
-    </div>
-    <div id="fractalInput"></div>
+  <div class="mainContainer">
 
-    <div id="memoryInput" class="memory"></div>
-    <div id="memoryOutput" class="memory"></div>
+    <section class="fractalWrapper">
+      <div class="fractalName"><center><b>This is a fractal graphieros composer.</b></center><br><br>
+      > click on circles to draw lines <br>
+      > to draw a dot, double click on a circle <br>
+      > <b>CUT</b> to start a new line <br>
+      > <b>CLEAR</b> to erase your input <br>
+      > <b>PRINT</b> your result <br>
+      > <b>WASH</b> to erase the output
+      </div>
+      <div id="fractalInput"></div>
 
-    <div class="fractalCommands">
-      <div id="fractalBtn0" class="fractalBtn">cut</div>
-      <div id="fractalBtn1" class="fractalBtn">clear</div>
-      <div id="fractalBtn2" class="fractalBtn">print</div>
-      <div id="fractalBtn3" class="fractalBtn">wash</div>
-    </div>
+      <div id="memoryInput" class="memory"></div>
+      <div id="memoryOutput" class="memory"></div>
 
-    <div id="fractalOutput"></div>
+      <div class="fractalCommands">
+        <div id="fractalBtn0" class="fractalBtn">cut</div>
+        <div id="fractalBtn1" class="fractalBtn">clear</div>
+        <div id="fractalBtn2" class="fractalBtn">print</div>
+        <div id="fractalBtn3" class="fractalBtn">wash</div>
+      </div>
 
-  </section>
+      <div id="fractalOutput"></div>
+    </section>
+
+    <section class="simpleGlyphShow">
+      <div id="simpleGlyphs"></div>
+    </section>
+
+  </div>
   
   <script src="js/fractal.js"></script>
 </body>
