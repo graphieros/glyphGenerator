@@ -206,7 +206,8 @@ svg {
   background:rgb(177, 108, 61);
 }
 
-.outputSVG {
+.outputSVG,
+.outlineSVG {
   transition: all 0.5s ease;
 }
 
