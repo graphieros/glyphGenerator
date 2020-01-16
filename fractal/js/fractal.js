@@ -10,10 +10,10 @@ const SIDESHOW = document.getElementById("simpleGlyphs");
 let i;
 
 let sides = 6;
-let Xcenter = 100;
-let Ycenter = 100;
 let svgHeight = 200;
 let svgWidth = 200;
+let Xcenter = svgHeight / 2;
+let Ycenter = svgHeight / 2;
 
 let circles = [];
 let Xarray = [];
@@ -166,8 +166,8 @@ let strokeWidth = 8;
    
     let sideShowSVG = document.createElementNS(xmlns, "svg");
     sideShowSVG.setAttributeNS(null, "viewBox", "0 0 200 200");
-    sideShowSVG.setAttributeNS(null, "width", "31");
-    sideShowSVG.setAttributeNS(null, "height", "31");
+    sideShowSVG.setAttributeNS(null, "width", "1.95em");
+    sideShowSVG.setAttributeNS(null, "height", "1.95em");
     sideShowSVG.setAttributeNS(null, "stroke-width", "8");
     sideShowSVG.setAttributeNS(null, "background", "transparent");
     sideShowSVG.setAttributeNS(null, "stroke-linecap", "round");
