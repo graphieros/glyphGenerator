@@ -105,6 +105,8 @@ function createSvg(){
 createSvg();
 
 (function cut(){
+  svg.setAttributeNS(null, "width", "200");
+  svg.setAttributeNS(null, "height", "200");
   const BTNCUT = document.getElementById("fractalBtn0");
   BTNCUT.addEventListener("click", function(){
     let path = document.createElementNS(xmlns, "path");
@@ -126,14 +128,22 @@ createSvg();
 }());
 
 let color = 240;
+// let color;
+// let color0 = "rgb(100,146,47)";
+// let color1 = "rgb(177, 108, 61)";
+// color = color0;
 let strokeWidth = 8;
 
 (function print(){
   const BTNPRINT = document.getElementById("fractalBtn2");
   
   BTNPRINT.addEventListener("click", function(){
+    // if(color === color1){
+    //   color = color0;
+    // }else{
+    //   color = color1;
+    // }
     let outputSVG= document.createElementNS(xmlns, "svg");
-    outputSVG.className = "outputSVG";
         outputSVG.setAttributeNS(null, "viewBox", "0 0 200 200");
         outputSVG.setAttributeNS(null, "width", svgWidth);
         outputSVG.setAttributeNS(null, "height", svgHeight);
@@ -142,6 +152,8 @@ let strokeWidth = 8;
         outputSVG.setAttributeNS(null, "stroke-linecap", "round");
         outputSVG.setAttributeNS(null, "stroke-linejoin", "round");
         outputSVG.setAttributeNS(null, "fill", "none");
+        outputSVG.setAttributeNS(null, "class", "outputSVG");
+        // outputSVG.setAttributeNS(null, "stroke", color);
         outputSVG.setAttributeNS(null, "stroke", `rgb(${color}, ${color}, ${color})`);
         outputSVG.setAttributeNS(null, "position", "absolute");
         
@@ -154,8 +166,8 @@ let strokeWidth = 8;
    
     let sideShowSVG = document.createElementNS(xmlns, "svg");
     sideShowSVG.setAttributeNS(null, "viewBox", "0 0 200 200");
-    sideShowSVG.setAttributeNS(null, "width", "32");
-    sideShowSVG.setAttributeNS(null, "height", "32");
+    sideShowSVG.setAttributeNS(null, "width", "31");
+    sideShowSVG.setAttributeNS(null, "height", "31");
     sideShowSVG.setAttributeNS(null, "stroke-width", "8");
     sideShowSVG.setAttributeNS(null, "background", "transparent");
     sideShowSVG.setAttributeNS(null, "stroke-linecap", "round");
@@ -188,4 +200,34 @@ let strokeWidth = 8;
     fractalInput.innerHTML="";
     createSvg();
   })
+}());
+
+(function zoom(){
+  const SVGS = document.getElementsByClassName("outputSVG");
+  const btnZoomIn = document.getElementById("zoomIn");
+  const btnZoomOut = document.getElementById("zoomOut");
+
+  btnZoomIn.addEventListener("click", function(){
+  for(i = 0; i < SVGS.length; i += 1){
+    let oneHeight = SVGS[i].clientHeight;
+    let oneWidth = SVGS[i].clientWidth;
+    SVGS[i].setAttributeNS(null, "height",`${oneHeight * 2}`);
+    SVGS[i].setAttributeNS(null, "width",`${oneWidth * 2}`);
+    SVGS[i].setAttributeNS(null, "z-index", -1);
+  } 
+});
+
+btnZoomOut.addEventListener("click", function(){
+  let oneHeight;
+  let oneWidth;
+  for(i = 0; i < SVGS.length; i += 1){
+    oneHeight = SVGS[i].clientHeight;
+    oneWidth = SVGS[i].clientWidth;
+    SVGS[i].setAttributeNS(null, "height",`${oneHeight / 2}`);
+    SVGS[i].setAttributeNS(null, "width",`${oneWidth / 2}`);
+    SVGS[i].setAttributeNS(null, "z-index", -1);
+
+  } 
+});
+
 }());
