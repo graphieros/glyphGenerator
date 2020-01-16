@@ -14,12 +14,12 @@
   display:grid;
   align-items:end;
   box-sizing: border-box;
-  padding-bottom:50px;
+  padding-bottom:70px;
   padding-right:10px;
 }
 
 #simpleGlyphs{
-  height:322px;
+  height:262px;
   width:100%;
   border-radius:2px;
   box-sizing: border-box;
@@ -39,7 +39,6 @@
   margin:0 auto;
   box-sizing: border-box;
   padding:10px;
-  /* border:1px solid grey; */
   border-radius:3px;
   display: grid;
   align-items:center;
@@ -155,7 +154,7 @@ svg {
 
 .zoomz{
   width:200px;
-  height:30px;
+  height:50px;
   margin:0 auto;
   display:grid;
   grid-template-columns: auto auto;
@@ -166,27 +165,40 @@ svg {
 }
 
 .zoomz > div {
-  height:100%;width:100%;
+  height:100%;
+  width:50px;
   background:lightgrey;
   border-radius:2px;
   display:grid;
   align-items:center;
   justify-items:center;
   box-sizing: border-box;
+  padding:8px;
   border:1px solid white;
   font-size:1.4em;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 
+#zoomOut{
+  border-radius:100px;
+}
+
 .zoomz > div:hover {
   transition: all 0.3s ease-in-out;
   color:white;
+  /* box-shadow: 0 1px 5px 1px black; */
 }
 
 #zoomIn:hover{
   border:1px solid greenyellow;
   background: rgb(100,146,47);
+  display: grid;
+}
+
+#zoomIn:hover>svg,
+#zoomOut:hover>svg{
+  stroke:white;
 }
 
 #zoomOut:hover{
@@ -197,3 +209,15 @@ svg {
 .outputSVG {
   transition: all 0.5s ease;
 }
+
+#svgZoomIn,
+#svgZoomOut{
+  fill:none;
+  stroke:black;
+  height:32px;
+  width: 32px;
+  stroke-width: 12px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
