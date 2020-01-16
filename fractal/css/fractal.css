@@ -14,11 +14,12 @@
   display:grid;
   align-items:end;
   box-sizing: border-box;
-  padding-bottom:10px;
+  padding-bottom:50px;
+  padding-right:10px;
 }
 
 #simpleGlyphs{
-  height:202px;
+  height:322px;
   width:100%;
   border-radius:2px;
   box-sizing: border-box;
@@ -64,6 +65,7 @@
 #fractalOutput{
   position:relative;
   border: 1px solid grey;
+  overflow:hidden;
 }
 
 .fractalCommands{
@@ -92,6 +94,7 @@
   color:grey;
   cursor:pointer;
   text-align:center;
+  z-index:10;
 }
 
 .fractalBtn:hover{
@@ -99,6 +102,14 @@
   transition: all 0.3s ease;
   color:black;
   font-weight:bold;
+}
+
+#fractalBtn1:hover{
+  border:1px solid red;
+}
+
+#fractalBtn2:hover{
+  border:1px solid greenyellow;
 }
 
 #fractalBtn1,
@@ -140,4 +151,49 @@ svg {
   width:200px;
   margin:0 auto;
   font-size:0.6em;
+}
+
+.zoomz{
+  width:200px;
+  height:30px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns: auto auto;
+  align-items:center;
+  justify-items:center;
+  grid-gap:10px;
+  z-index:10;
+}
+
+.zoomz > div {
+  height:100%;width:100%;
+  background:lightgrey;
+  border-radius:2px;
+  display:grid;
+  align-items:center;
+  justify-items:center;
+  box-sizing: border-box;
+  border:1px solid white;
+  font-size:1.4em;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.zoomz > div:hover {
+  transition: all 0.3s ease-in-out;
+  color:white;
+}
+
+#zoomIn:hover{
+  border:1px solid greenyellow;
+  background: rgb(100,146,47);
+}
+
+#zoomOut:hover{
+  border:1px solid red;
+  background:rgb(177, 108, 61);
+}
+
+.outputSVG {
+  transition: all 0.5s ease;
 }
