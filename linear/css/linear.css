@@ -1,0 +1,151 @@
+*{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+  margin-left:0;
+  margin-top: 0; 
+}
+
+p.notice{
+  grid-column: 1 / span 2;
+  font-size: 0.8em;
+  width:230px;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+.takemall{
+  margin: 0 auto;
+  width:500px;
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.mainWrapper_L{
+  border-radius:3px;
+  box-sizing: border-box;
+  padding:20px;
+  display:grid;
+  align-items:center;
+  justify-items:center;
+  align-content:start;
+  grid-gap:20px;
+}
+
+.inputSVGwrapper_L{
+  height:200px;
+  width:200px;
+  border:1px solid lightgrey;
+  border-radius:2px;
+  box-sizing: border-box;
+}
+
+.buttonsWrapper_L{
+  width:200px;
+  box-sizing: border-box;
+  padding:10px;
+  border:1px solid lightgrey;
+  border-radius:2px;
+  display: grid;
+  align-items:center;
+  justify-items:center;
+  grid-gap: 5px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.button_L{
+  font-size:0.8em;
+  height:22px;
+  box-sizing: border-box;
+  padding:3px;
+  display:grid;
+  align-items:center;
+  justify-items:center;
+  border-radius: 2px;
+  width:100%;
+  border:1px solid transparent;
+  background-color: black;
+  color:white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button_L:hover{
+  background-color: white;
+  color: black;
+  border:1px solid black;
+}
+
+#LINK_L,
+#CLEARSENTENCE{
+  grid-column: 1 / span 2;
+}
+
+.outputWrapper_L{
+  width:200px;
+  box-sizing: border-box;
+  padding:10px;
+  border:1px solid lightgrey;
+  border-radius:2px;
+  display: grid;
+  align-items:center;
+  justify-items:center;
+}
+
+#baseSVG{
+  background: black;
+  height:200px;
+  width:200px;
+}
+
+.inputCircles{
+  transition: all 0.3s ease;
+}
+
+.inputCircles:hover{
+  r: 90;
+}
+
+.STM_L,
+.LTM_L{
+width:200px;
+background:black;
+box-sizing: border-box;
+padding:5px;
+font-size: 0.5em;
+color: greenyellow;
+word-break: break-all;
+border-radius:2px;
+}
+
+.ICS_L{
+  width:200px;
+  background: radial-gradient(white, tomato);
+  box-sizing: border-box;
+  padding:5px;
+  font-size:0.5em;
+  color: black;
+  word-break: break-all;
+  border-radius:2px;
+  display:none;
+}
+
+#PRINTER_L{
+  width:100%;
+  display: grid;
+  align-items:center;
+  justify-items:center;
+}
+
+#sentence{
+  width:80px;
+  display:grid;
+  align-items:start;
+  justify-items:center;
+  align-content:start;
+  box-sizing: border-box;
+  border-radius:2px;
+  padding:15px;
+}
+
