@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/linear.css" class="css">
+  <title>Document</title>
+</head>
+<body>
+
+  <section class="takemall">
+    <p class="notice">
+      > click the dots to link'em <br>
+      > click CUT to end a line <br>
+      > click CLEAR if you missed <br>
+      > click LINK to save your glyph and CLEAR to draw its next connected glyph <br>
+      > click WORD to print the entire word <br>
+      > click WASH if you missed everything <br>
+      > click CLEAR SENTENCE to erase the printed words.
+    </p>
+
+    <section class="mainWrapper_L">
+
+      <div class="inputSVGwrapper_L" id="inputSVGwrapper_L">
+      </div>
+
+      <div class="buttonsWrapper_L">
+        <div class="button_L" id="CUT_L">CUT</div>
+        <div class="button_L" id="CLEAR_L">CLEAR</div>
+        <div class="button_L" id="LINK_L">LINK</div>
+        <div class="button_L" id="WORD_L">WORD</div>
+        <div class="button_L" id="WASH_L">WASH</div>
+        <div class="button_L" id="CLEARSENTENCE">CLEAR SENTENCE</div>
+      </div>
+
+      <div class="STM_L" id="STM_L"></div>
+      <div class="LTM_L" id="LTM_L"></div>
+      <div class="ICS_L" id="CS_L"></div>
+      <div class="ICS_L" id="ICS_L"></div>
+
+      <div class="outputWrapper_L">
+        <div id="PRINTER_L"></div>
+      </div>
+
+    </section>
+
+    <section id="sentence"></section>
+
+  </section>
+  
+  <script src="js/linear.js"></script>
+</body>
+</html>
