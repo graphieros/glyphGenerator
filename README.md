@@ -11,5 +11,9 @@ Compose fractal graphieros glyphs
 Compose full sentences in linear graphieros. Words are composed by linked glyphs.
 <br><br>
 <img src="https://github.com/graphieros/glyphGenerator/blob/master/linear/linear.png" width="250px">
-
+<br><br>
+<b>molecular</b><br>
+Compose graphieros in molecular mode, arranging up to 6 glyphs around a central one.
+<br><br>
+<img src="https://github.com/graphieros/glyphGenerator/blob/master/molecular/molecular.png" width="250px">
 
