@@ -33,47 +33,7 @@
         drawnLines = [];
         LTM.innerHTML = "";
 
-        // let Xcord0, Xcord1, Xcord2, Xcord3, Xcord4, Xcord5, Xcord6;
-        // let Ycord0, Ycord1, Ycord2, Ycord3, Ycord4, Ycord5, Ycord6;
-
-        // Xarray.push(Xcenter);
-        // Yarray.push(Ycenter);
-
-
-        // for (i = 0; i < 1000; i += 1) {
-        // Xcord0 = Math.round((Xcenter + size * Math.cos(i * 2 * Math.PI / sides)) * 100) / 100;
-        // Xcord1 = Math.round((Xcenter + (size*2) * Math.cos(i * 2 * Math.PI / sides)) * 100) / 100;
-        // Xcord2 = Math.round((Xcenter + (size*1.5) * Math.cos(i * 2 * Math.PI / sides)) * 100) / 100;
-        // Xcord3 = Math.round((Xcenter + size * Math.cos((i+1) * 2 * Math.PI / sides)) * 100) / 100;
-        // Xcord4 = Math.round((Xcenter + (size*2) * Math.cos((i+2) * 2 * Math.PI / sides)) * 100) / 100;
-        // Xcord5 = Math.round((Xcenter + (size*0.5) * Math.cos((i+2) * 2 * Math.PI / sides)) * 100) / 100;
-        // Xcord6 = Math.round((Xcenter + (size*2.5) * Math.cos((i+2) * 2 * Math.PI / sides)) * 100) / 100;
-
-        // Ycord0 = Math.round((Ycenter + size * Math.sin(i * 2 * Math.PI / sides)) * 100) / 100;
-        // Ycord1 = Math.round((Ycenter + (size*2) * Math.sin(i * 2 * Math.PI / sides)) * 100) / 100;
-        // Ycord2 = Math.round((Xcenter + (size*1.5) * Math.sin(i * 2 * Math.PI / sides)) * 100) / 100;
-        // Ycord3 = Math.round((Ycenter + (size*2) * Math.sin((i+1) * 2 * Math.PI / sides)) * 100) / 100;
-        // Ycord4 = Math.round((Ycenter + (size) * Math.sin((i+2) * 2 * Math.PI / sides)) * 100) / 100;
-        // Ycord5 = Math.round((Ycenter + (size*1.5) * Math.sin((i+2) * 2 * Math.PI / sides)) * 100) / 100;
-        // Ycord6 = Math.round((Ycenter + (size*1.5) * Math.sin((i+2) * 2 * Math.PI / sides)) * 100) / 100;
-
-
-        // Xarray.push(Xcord0);
-        // Xarray.push(Xcord1);
-        // Xarray.push(Xcord2);
-        // Xarray.push(Xcord3);
-        // Xarray.push(Xcord4);
-        // Xarray.push(Xcord5);
-        // Xarray.push(Xcord6);
-
-        // Yarray.push(Ycord0);
-        // Yarray.push(Ycord1);
-        // Yarray.push(Ycord2);
-        // Yarray.push(Ycord3);
-        // Yarray.push(Ycord4);
-        // Yarray.push(Ycord5);
-        // Yarray.push(Ycord6);
-        // };
+        //coordinates are hardcoded. Unfortunately
 
         Xarray=[
                         310, 410,     610, 710,
