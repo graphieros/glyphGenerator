@@ -1,0 +1,150 @@
+#main_wrapper_molecular{
+  max-width:330px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns: 210px auto;
+  border:1px solid lightgrey;
+  box-sizing: border-box;
+  padding:5px;
+  border-radius:4px;
+  grid-gap: 5px;
+  align-items:center;
+  justify-items:center;
+  align-items: start;
+}
+
+.IO{
+  width:100%;
+  display:grid;
+  align-items:center;
+  justify-items:center;
+  border-radius:3px;
+  grid-gap: 5px;
+  padding:2.5px;
+  box-sizing: border-box;
+}
+
+#IO_SVG{
+  width:200px;
+  height:200px;
+  background:black;
+  border-radius:15px;
+}
+
+#controls_molecular{
+  width:100%;
+  box-sizing: border-box;
+  padding:2.5px;
+  display:grid;
+  align-items:center;
+  justify-items:center;
+  background:transparent;
+  border-radius:3px;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap:5px;
+}
+
+.btn_molecular{
+  width:100%;
+  height:30px;
+  display:grid;
+  align-items:center;
+  justify-items:center;
+  border:1px solid transparent;
+  box-sizing: border-box;
+  cursor:pointer;
+  font-family: 'Courier New', Courier, monospace;
+  background: black;
+  color:white;
+  opacity:0.75;
+  transition: all 0.3s ease;
+}
+
+.btn_molecular:hover{
+  opacity:1;
+  color:greenyellow;
+  border:1px solid black;
+}
+
+#CUT_mol,
+#MOLECULE{
+  border-radius: 100px 20px 20px 100px;
+}
+
+#CLEAR_mol,
+#WASH_mol{
+  border-radius: 20px 100px 100px 20px;
+}
+
+#LINK_mol,
+#DISSOLVE_mol{
+  grid-column: 1 / span 2;
+  border-radius:100Px;
+}
+
+#LINK_mol{
+  background: cornflowerblue;
+  color:black;
+}
+
+#MOLECULE,
+#WASH_mol{
+  background: white;
+  color:black;
+}
+
+#MOLECULE{
+  background: greenyellow;
+}
+
+#WASH_mol{
+  background: tomato;
+}
+
+.molecular_memory{
+  word-break: break-all;
+  background:black;
+  box-sizing: border-box;
+  padding:5px;
+  font-size:0.5em;
+  color: greenyellow;
+  font-family: 'Courier New', Courier, monospace;
+  width:100%;
+  border-radius:3px;
+}
+
+#molecular_printer{
+  height:200px;
+  width:200px;
+  box-sizing: border-box;
+  border-radius:15px;
+  display: grid;
+  align-items:center;
+  justify-items:center;
+}
+
+#IO_molecular_SVG{
+  height:200px;
+  width:200px;
+}
+
+.circles_mol_min,
+.circles_mol_max{
+  transition: all 0.3s ease;
+}
+
+.circles_mol_min:hover{
+  r: 48;
+  fill:cornflowerblue;
+}
+
+.circles_mol_max:hover{
+  r: 64;
+}
+
+#wrapper_IO_right{
+  display:grid;
+  align-items:center;
+  justify-items:center;
+  grid-gap:0px;
+}
